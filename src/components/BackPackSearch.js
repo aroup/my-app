@@ -16,17 +16,16 @@ class BackPackSearch extends Component {
         <Row>
           <Col span={16}>
             <Row>
-              <Col span={4}></Col>
-              <Col span={16}><SearchBar actions={this.props.actions}/></Col>
-              <Col span={4}></Col>
+              <Col span={6}></Col>
+              <Col span={12}><SearchBar actions={this.props.actions}/></Col>
             </Row>
             <br/> <br/>
             {
               isLoading ?
               <Row>
-                <Col span={2}></Col>
-                <Col span={20}><LoadingBar/></Col>                
-                <Col span={2}></Col>
+                <Col span={10}></Col>
+                <Col span={4}><LoadingBar/></Col>
+                <Col span={10}></Col>
               </Row>  : <ResultList results={this.props.results} actions={this.props.actions}/>
             }
           </Col>

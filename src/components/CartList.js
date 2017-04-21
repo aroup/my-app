@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button,Tag} from 'antd';
+import {Button,Tag,Row,Col} from 'antd';
 
 class CartList extends Component{
   handleOnClick=()=>{
@@ -12,16 +12,33 @@ class CartList extends Component{
     let Listed = items.map((item)=>{
       return(
         <div key={i++}>
-          <h2>{i}.</h2><p>{item.title}</p>
-          <Tag color="#f50">${item.price/100}</Tag>
+          <Row>
+            <Col span={16}>
+              <p>{i} .  {item.title}</p>
+            </Col>
+            <Col span={2}></Col>
+            <Col span={6}>
+              <Tag color="#f50">${item.price/100}</Tag>
+            </Col>
+          </Row>
           <br/>
         </div>
       )
     })
     return(
       <div>
-        <h1><i>Cart Items</i></h1>
-        {items.length === 0 ? <Button type="danger" disabled> Clear Cart</Button> : <Button type="danger" onClick={this.handleOnClick}>Clear Cart</Button> }
+        <Row>
+          <Col span="16">
+            <h2><i><u>Cart Items</u></i></h2>
+          </Col>
+          <Col span="2">
+          </Col>
+          <Col span="6">
+            {items.length === 0 ? <Button type="danger" disabled> Clear Cart</Button> : <Button type="danger" onClick={this.handleOnClick}>Clear Cart</Button> }
+          </Col>
+        </Row>
+        <br/>
+        <br/>
         {Listed}
       </div>
     )
