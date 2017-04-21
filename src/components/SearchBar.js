@@ -4,6 +4,7 @@ const Search = Input.Search
 
 class SearchBar extends Component {
   handleOnSearch=(value)=>{
+    this.props.actions.startAsync();
     this.props.actions.searchItems(value);
     //  console.log(query)
   }
@@ -14,7 +15,7 @@ class SearchBar extends Component {
     return (
       <Search
         placeholder="Search on BackPack"
-        style={{width : 400}}
+        style={{width : 500}}
         onSearch={this.handleOnSearch}
         onChange={this.handleOnChange}
       />

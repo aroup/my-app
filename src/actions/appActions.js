@@ -11,11 +11,24 @@ export function searchItems(query){
     })
     .then(function(response){
       console.log(response);
+      dispatch(stopAsync())
       dispatch(addItems(response.data.hits.hits))
     })
     .catch(function(error){
       console.log('error has happened');
     })
+  }
+}
+
+export function startAsync(){
+  return {
+    type : types.START_ASYNC
+  }
+}
+
+export function stopAsync(){
+  return{
+    type : types.STOP_ASYNC
   }
 }
 
@@ -46,16 +59,3 @@ export function clearCart(){
     payload : []
   }
 }
-
-// export function Search(query){
-//   let queryString = `https://api.unsplash.com/search/photos?query=${query}&page=1&per_page=20&client_id=2e53f236412a1ebf5f4223ffd1e1cd4b7ff99a4be4de276cac7353c9794a66c1`
-//   return function(dispatch){
-//     axios.get(queryString)
-//     .then(function(response){
-//       //  console.log(typeof(response.data.results))
-//       dispatch(addResults(response.data.results));
-//     }).catch(function(error){
-//       console.log('error has happened');
-//     })
-//   }
-// }

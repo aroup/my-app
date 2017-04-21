@@ -6,9 +6,11 @@ import {connect} from 'react-redux';
 import {Row,Col} from 'antd';
 import ResultList from './ResultList';
 import CartList from './CartList';
+import LoadingBar from './LoadingBar';
 
 class BackPackSearch extends Component {
   render() {
+    let {isLoading} =this.props;
     return (
       <div>
         <Row>
@@ -19,7 +21,14 @@ class BackPackSearch extends Component {
               <Col span={4}></Col>
             </Row>
             <br/> <br/>
-            <ResultList results={this.props.results} actions={this.props.actions}/>
+            {
+              isLoading ?
+              <Row>
+                <Col span={2}></Col>
+                <Col span={20}><LoadingBar/></Col>                
+                <Col span={2}></Col>
+              </Row>  : <ResultList results={this.props.results} actions={this.props.actions}/>
+            }
           </Col>
           <Col span={8}>
             <CartList items={this.props.items} actions={this.props.actions}/>
@@ -40,7 +49,8 @@ function mapDispatchToProps(dispatch){
 function mapStateToProps(state){
   return {
     items : state.items,
-    results : state.results
+    results : state.results,
+    isLoading : state.isLoading
   }
 }
 

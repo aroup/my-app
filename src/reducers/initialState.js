@@ -4,5 +4,6 @@
 
 export default {
   results: [],
-  items:[]
+  items:[],
+  isLoading : false
 }
