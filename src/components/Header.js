@@ -13,6 +13,9 @@ class Header extends Component {
         {/* <Menu.Item key="datepicker">
           <Link to="/datepicker">DatePicker</Link>
         </Menu.Item> */}
+        <Menu.Item key="search">
+          <Link to='/search'> BackPackSearch</Link>
+        </Menu.Item>
         <Menu.Item key="about">
           <Link to="/about">About</Link>
         </Menu.Item>
