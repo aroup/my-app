@@ -5,5 +5,6 @@
 export default {
   results: [],
   items:[],
-  isLoading : false
+  isLoading : false,
+  isLoaded : false
 }

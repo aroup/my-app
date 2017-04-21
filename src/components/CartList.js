@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Button,Tag,Row,Col} from 'antd';
+import EmptyCart from './EmptyCart';
 
 class CartList extends Component{
   handleOnClick=()=>{
@@ -39,7 +40,7 @@ class CartList extends Component{
         </Row>
         <br/>
         <br/>
-        {Listed}
+        {items.length===0 ? <EmptyCart/> : Listed }
       </div>
     )
   }

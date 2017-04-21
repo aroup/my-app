@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Result from './Result';
 // import {Row} from 'antd'
+import EmptyResult from './EmptyResult';
+
 class ResultList extends Component{
   render(){
     var {results} = this.props;
@@ -19,7 +21,7 @@ class ResultList extends Component{
     })
     return(
       <div>
-        {Listed}
+        {results.length===0 ? <EmptyResult/> : Listed }
       </div>
     )
   }

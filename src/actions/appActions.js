@@ -13,8 +13,11 @@ export function searchItems(query){
       console.log(response);
       dispatch(stopAsync())
       dispatch(addItems(response.data.hits.hits))
+      dispatch(makeTrue())
     })
     .catch(function(error){
+      dispatch(stopAsync())
+      dispatch(makeFalse())
       console.log('error has happened');
     })
   }
@@ -23,6 +26,18 @@ export function searchItems(query){
 export function startAsync(){
   return {
     type : types.START_ASYNC
+  }
+}
+
+export function makeTrue(){
+  return{
+    type : types.MAKE_TRUE
+  }
+}
+
+export function makeFalse(){
+  return {
+    type : types.MAKE_FALSE
   }
 }
 

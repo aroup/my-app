@@ -7,10 +7,12 @@ import {Row,Col} from 'antd';
 import ResultList from './ResultList';
 import CartList from './CartList';
 import LoadingBar from './LoadingBar';
-
+import InitialMessage from './InitialMessage';
+// import EmptyResult from './EmptyResult';
 class BackPackSearch extends Component {
   render() {
-    let {isLoading} =this.props;
+    let {isLoading,isLoaded} =this.props;
+
     return (
       <div>
         <Row>
@@ -26,7 +28,10 @@ class BackPackSearch extends Component {
                 <Col span={10}></Col>
                 <Col span={4}><LoadingBar/></Col>
                 <Col span={10}></Col>
-              </Row>  : <ResultList results={this.props.results} actions={this.props.actions}/>
+              </Row>  :
+              isLoaded ?
+               <ResultList results={this.props.results} actions={this.props.actions}/>
+               : <InitialMessage/>
             }
           </Col>
           <Col span={8}>
@@ -49,7 +54,8 @@ function mapStateToProps(state){
   return {
     items : state.items,
     results : state.results,
-    isLoading : state.isLoading
+    isLoading : state.isLoading,
+    isLoaded : state.isLoaded
   }
 }
 

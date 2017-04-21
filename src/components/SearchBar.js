@@ -9,6 +9,7 @@ class SearchBar extends Component {
     //  console.log(query)
   }
   handleOnChange=()=>{
+    this.props.actions.makeFalse();
     this.props.actions.clearItems();
   }
   render() {
