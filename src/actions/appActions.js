@@ -10,7 +10,6 @@ export function searchItems(query){
       headers : {"Access-Control-Allow-Origin" : "*"}
     })
     .then(function(response){
-      // console.log(response);
       dispatch(stopAsync());
       dispatch(addItems(response.data.hits.hits));
       dispatch(makeTrue());
@@ -18,7 +17,6 @@ export function searchItems(query){
     .catch(function(error){
       dispatch(stopAsync());
       dispatch(makeFalse());
-      // console.log('error has happened');
     })
   }
 }
