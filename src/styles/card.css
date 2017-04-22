@@ -55,8 +55,8 @@
 .floating-box {
     display: inline-block;
     width: 250px;
-    height: auto;
-    margin: 10px;
+    height: 270px;
+    margin: 20px;
     /*border-style: solid;
     border-color: red;*/
 }
