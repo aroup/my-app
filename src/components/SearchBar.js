@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {Input} from 'antd';
-const Search = Input.Search
+const Search = Input.Search;
 
 class SearchBar extends Component {
   handleOnSearch=(value)=>{
     this.props.actions.startAsync();
     this.props.actions.searchItems(value);
-    //  console.log(query)
   }
   handleOnChange=()=>{
-    this.props.actions.makeFalse();
-    this.props.actions.clearItems();
+    // this.props.actions.makeFalse();
+    // this.props.actions.clearItems();
   }
   render() {
     return (

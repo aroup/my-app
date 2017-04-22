@@ -13,7 +13,7 @@ class InitialMessage extends Component{
         </Row>
 
       </div>
-    )
+    );
   }
 }
 

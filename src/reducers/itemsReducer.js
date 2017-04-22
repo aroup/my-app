@@ -4,10 +4,10 @@ import initialState from './initialState';
 export default function itemsReducer(state=initialState.items,action){
   switch(action.type){
     case types.ADD_CART:
-      return [...state,Object.assign({},action.payload)]
+      return [...state,Object.assign({},action.payload)];
     case types.CLEAR_CART:
-      return []
+      return [];
     default :
-      return state
+      return state;
   }
 }

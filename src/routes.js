@@ -11,8 +11,8 @@ import BackPackSearch from './components/BackPackSearch';
 // )
 
 export default(
-  <Route path='/my-app/' component={App}>
-    <Route path="/my-app/search" component={BackPackSearch}/>
-    <Route path="/my-app/about" component={AboutPage}/>
+  <Route path='/' component={App}>
+    <Route path="/my-app" component={BackPackSearch}/>
+    <Route path="/about" component={AboutPage}/>
   </Route>
 )

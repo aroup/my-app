@@ -16,7 +16,7 @@ class EmptyCart extends Component{
         </Row>
 
       </div>
-    )
+    );
   }
 }
 

@@ -10,20 +10,14 @@ class Header extends Component {
         <Menu.Item key="Software">
           <h3> React Redux SPA </h3>
         </Menu.Item>
-        {/* <Menu.Item key="datepicker">
-          <Link to="/datepicker">DatePicker</Link>
-        </Menu.Item> */}
         <Menu.Item key="search">
-          <Link to='/my-app/search'> BackPackSearch</Link>
+          <Link to='/my-app'> BackPackSearch</Link>
         </Menu.Item>
         <Menu.Item key="about">
-          <Link to="/my-app/about">About</Link>
+          <Link to="/about">About</Link>
         </Menu.Item>
-        {/* <Menu.Item key="appointments">
-          <Link to="/appointment"> Appointments </Link>
-        </Menu.Item> */}
       </Menu>
-    )
+    );
   }
 }
 

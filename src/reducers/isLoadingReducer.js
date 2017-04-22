@@ -4,10 +4,10 @@ import initialState from './initialState';
 export default function isLoadingReducer(state=initialState.isLoading,action){
   switch(action.type){
     case types.START_ASYNC:
-      return true
+      return true;
     case types.STOP_ASYNC:
-      return false
+      return false;
     default:
-      return state
+      return state;
   }
 }

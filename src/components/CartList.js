@@ -7,7 +7,7 @@ class CartList extends Component{
     this.props.actions.clearCart();
   }
   render(){
-    // items will be sent in the cart list
+
     let {items} =this.props;
     let i = 0;
     let Listed = items.map((item)=>{
@@ -25,7 +25,7 @@ class CartList extends Component{
           <br/>
         </div>
       )
-    })
+    });
     return(
       <div>
         <Row>
@@ -42,7 +42,7 @@ class CartList extends Component{
         <br/>
         {items.length===0 ? <EmptyCart/> : Listed }
       </div>
-    )
+    );
   }
 }
 

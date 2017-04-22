@@ -71,6 +71,8 @@
     right: 0px;
 }
 
+.object-fit_contain { object-fit: contain }
+
 /*.top Tag {
   color: black;
   margin: 0;

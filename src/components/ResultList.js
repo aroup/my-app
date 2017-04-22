@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Result from './Result';
-// import {Row} from 'antd'
 import EmptyResult from './EmptyResult';
 
 class ResultList extends Component{
@@ -17,13 +16,13 @@ class ResultList extends Component{
       }
       return (
           <Result actions={this.props.actions} key={result._id} title={title} images={result._source.images} price={price} asin={result._source.asin}/>
-      )
+      );
     })
     return(
       <div>
         {results.length===0 ? <EmptyResult/> : Listed }
       </div>
-    )
+    );
   }
 }
 

@@ -8,11 +8,11 @@ import ResultList from './ResultList';
 import CartList from './CartList';
 import LoadingBar from './LoadingBar';
 import InitialMessage from './InitialMessage';
-// import EmptyResult from './EmptyResult';
+
+
 class BackPackSearch extends Component {
   render() {
     let {isLoading,isLoaded} =this.props;
-
     return (
       <div>
         <Row>
@@ -56,7 +56,7 @@ function mapStateToProps(state){
     results : state.results,
     isLoading : state.isLoading,
     isLoaded : state.isLoaded
-  }
+  };
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(BackPackSearch);

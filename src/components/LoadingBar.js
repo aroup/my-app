@@ -9,8 +9,8 @@ class LoadingBar extends Component{
           <br/>
         </Spin>
       </div>
-    )
+    );
   }
 }
 
-export default LoadingBar
+export default LoadingBar;
