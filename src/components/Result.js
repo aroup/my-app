@@ -13,17 +13,17 @@ class Result extends Component {
   render(){
     var price = this.props.price/100;
     return (
-      <div className="floating-box">
-        <div className="container">
+          <div className="floating-box">
+          <div className="container">
+          <img alt="example" width="250" height="250" src={this.props.images[0]}/>
             <div className="topright">
               <Tag color="#f50">${price}</Tag>
             </div>
-            <img alt="example" width="250" height="300" src={this.props.images[0]}/>
-        </div>
-        <b>{this.props.title}</b>
-        <br/>
-        <br/>
-        <Button type="primary" onClick={this.handleOnClick}>Add To Cart!</Button>
+          </div>
+            <b>{this.props.title}</b>
+            <br/>
+            <br/>
+            <Button type="primary" onClick={this.handleOnClick}>Add To Cart!</Button>
     </div>
     )
   }

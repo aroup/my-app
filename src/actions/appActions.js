@@ -18,7 +18,7 @@ export function searchItems(query){
     .catch(function(error){
       dispatch(stopAsync())
       dispatch(makeFalse())
-      console.log('error has happened');
+      // console.log('error has happened');
     })
   }
 }
